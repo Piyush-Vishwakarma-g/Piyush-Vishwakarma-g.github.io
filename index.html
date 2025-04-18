@@ -43,258 +43,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piyush Vishwakarma - Portfolio</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
-            color: #fff;
-            scroll-behavior: smooth;
-        }
-        .navbar {
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-        }
-        .navbar-brand, .nav-link {
-            color: #fff !important;
-            font-weight: 400;
-        }
-        .nav-link:hover {
-            color: #00ff88 !important;
-        }
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: url('https://swarnimdip.github.io/PortFolio/assets/img/background.jpg') no-repeat center/cover;
-        }
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .hero-section p {
-            font-size: 1.5rem;
-            color: #00ff88;
-        }
-        .typed-element {
-            color: #00ff88;
-            font-weight: 300;
-        }
-        .section {
-            padding: 80px 0;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #00ff88;
-        }
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #ccc;
-        }
-        .skill-card, .project-card {
-            background: #2a2a2a;
-            border: none;
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s;
-        }
-        .skill-card:hover, .project-card:hover {
-            transform: translateY(-10px);
-        }
-        .skill-card i {
-            font-size: 2rem;
-            color: #00ff88;
-        }
-        .project-card img {
-            border-radius: 10px;
-            height: 200px;
-            object-fit: cover;
-        }
-        .contact-form {
-            background: #2a2a2a;
-            padding: 30px;
-            border-radius: 10px;
-        }
-        .form-control {
-            background: #333;
-            border: none;
-            color: #fff;
-        }
-        .form-control:focus {
-            background: #333;
-            color: #fff;
-            box-shadow: 0 0 5px #00ff88;
-        }
-        .btn-primary {
-            background: #00ff88;
-            border: none;
-            color: #000;
-            font-weight: 600;
-        }
-        .btn-primary:hover {
-            background: #00cc70;
-        }
-        .footer {
-            background: #1a1a1a;
-            padding: 20px 0;
-            text-align: center;
-            color: #ccc;
-        }
-        .social-icons a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #00ff88;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
+<body class="font-poppins bg-gray-900 text-white">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Piyush Vishwakarma</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
+    <nav class="bg-gray-800 bg-opacity-80 backdrop-blur-md shadow-lg fixed w-full z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-400">Piyush Vishwakarma</a>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#home" class="hover:text-teal-400 transition">Home</a>
+                <a href="#about" class="hover:text-teal-400 transition">About</a>
+                <a href="#skills" class="hover:text-teal-400 transition">Skills</a>
+                <a href="#projects" class="hover:text-teal-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-teal-400 transition">Contact</a>
             </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#home" class="block px-4 py-2 hover:bg-gray-700">Home</a>
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-700">About</a>
+            <a href="#skills" class="block px-4 py-2 hover:bg-gray-700">Skills</a>
+            <a href="#projects" class="block px-4 py-2 hover:bg-gray-700">Projects</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-gray-700">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div>
-            <h1>Hi, I'm Piyush Vishwakarma</h1>
-            <p>I'm a <span class="typed-element"></span></p>
-            <div class="social-icons mt-4">
-                <a href="https://github.com/piyush-vishwakarma-g" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/piyush-vishwakarma" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/piyushvishwa" target="_blank"><i class="fab fa-twitter"></i></a>
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-700">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi, I'm Piyush Vishwakarma</h1>
+            <p class="text-xl md:text-2xl mb-6">I'm a <span class="typed-element text-teal-400"></span></p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/piyush-vishwakarma-g" target="_blank" class="text-teal-400 hover:text-teal-500"><i class="fab fa-github text-2xl"></i></a>
+                <a href="https://linkedin.com/in/piyush-vishwakarma" target="_blank" class="text-teal-400 hover:text-teal-500"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="https://twitter.com/piyushvishwa" target="_blank" class="text-teal-400 hover:text-teal-500"><i class="fab fa-twitter text-2xl"></i></a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="https://via.placeholder.com/400x400?text=Your+Photo" class="img-fluid rounded" alt="Piyush Vishwakarma">
+    <section id="about" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400" data-aos="fade-up">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2" data-aos="fade-right">
+                    <img src="assets/images/profile.jpg" alt="Piyush Vishwakarma" class="rounded-lg shadow-lg">
                 </div>
-                <div class="col-md-6">
-                    <p class="about-text">
-                        Hello! I'm Piyush Vishwakarma, a passionate web developer with a knack for creating dynamic and responsive websites. I specialize in front-end and back-end development, with experience in HTML, CSS, JavaScript, and various frameworks. My goal is to build user-friendly applications that solve real-world problems.
+                <div class="w-full md:w-1/2" data-aos="fade-left">
+                    <p class="text-lg mb-4 text-gray-300">
+                        Hello! I'm Piyush Vishwakarma, a passionate web developer with a knack for creating dynamic and responsive websites. I specialize in front-end and back-end development, with experience in HTML, CSS, JavaScript, and various frameworks.
                     </p>
-                    <p class="about-text">
-                        When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book. Let's connect and create something amazing together!
+                    <p class="text-lg text-gray-300">
+                        My goal is to build user-friendly applications that solve real-world problems. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good book. Let's connect and create something amazing together!
                     </p>
-                    <a href="#contact" class="btn btn-primary mt-3">Get in Touch</a>
+                    <a href="#contact" class="bg-teal-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-teal-500 transition mt-4 inline-block">Get in Touch</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card text-center">
-                        <i class="fab fa-html5"></i>
-                        <h4 class="mt-3">HTML5</h4>
-                        <p>Building semantic and accessible web structures.</p>
-                    </div>
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400" data-aos="fade-up">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="text-center p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in">
+                    <i class="fab fa-html5 text-4xl text-teal-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold">HTML5</h3>
+                    <p class="text-gray-400">Building semantic and accessible web structures.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card text-center">
-                        <i class="fab fa-css3-alt"></i>
-                        <h4 class="mt-3">CSS3</h4>
-                        <p>Styling responsive and visually appealing interfaces.</p>
-                    </div>
+                <div class="text-center p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in">
+                    <i class="fab fa-css3-alt text-4xl text-teal-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold">CSS3</h3>
+                    <p class="text-gray-400">Styling responsive and visually appealing interfaces.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card text-center">
-                        <i class="fab fa-js"></i>
-                        <h4 class="mt-3">JavaScript</h4>
-                        <p>Creating interactive and dynamic web applications.</p>
-                    </div>
+                <div class="text-center p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in">
+                    <i class="fab fa-js text-4xl text-teal-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold">JavaScript</h3>
+                    <p class="text-gray-400">Creating interactive and dynamic web applications.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card text-center">
-                        <i class="fab fa-react"></i>
-                        <h4 class="mt-3">React</h4>
-                        <p>Developing modern single-page applications.</p>
-                    </div>
+                <div class="text-center p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in">
+                    <i class="fab fa-react text-4xl text-teal-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold">React</h3>
+                    <p class="text-gray-400">Developing modern single-page applications.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card text-center">
-                        <i class="fab fa-node"></i>
-                        <h4 class="mt-3">Node.js</h4>
-                        <p>Building scalable server-side applications.</p>
-                    </div>
+                <div class="text-center p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in">
+                    <i class="fab fa-node text-4xl text-teal-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold">Node.js</h3>
+                    <p class="text-gray-400">Building scalable server-side applications.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="skill-card text-center">
-                        <i class="fas fa-database"></i>
-                        <h4 class="mt-3">MongoDB</h4>
-                        <p>Managing NoSQL databases for efficient data storage.</p>
-                    </div>
+                <div class="text-center p-4 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in">
+                    <i class="fas fa-database text-4xl text-teal-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold">MongoDB</h3>
+                    <p class="text-gray-400">Managing NoSQL databases for efficient data storage.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200?text=Project+1" class="img-fluid" alt="Project 1">
-                        <h4 class="mt-3">E-Commerce Website</h4>
-                        <p>A fully functional online store built with React and Node.js, featuring user authentication and payment integration.</p>
-                        <a href="https://github.com/piyush-vishwakarma-g/project1" class="btn btn-primary">View Project</a>
+    <section id="projects" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400" data-aos="fade-up">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden project-card" data-aos="fade-up">
+                    <img src="assets/images/project1.jpg" alt="E-Commerce Website" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">E-Commerce Website</h3>
+                        <p class="text-gray-400 mb-4">A fully functional online store built with React and Node.js, featuring user authentication and payment integration.</p>
+                        <a href="https://github.com/piyush-vishwakarma-g/project1" class="text-teal-400 hover:underline">View Project</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200?text=Project+2" class="img-fluid" alt="Project 2">
-                        <h4 class="mt-3">Task Manager App</h4>
-                        <p>A productivity app for managing tasks, built with JavaScript and Firebase for real-time data syncing.</p>
-                        <a href="https://github.com/piyush-vishwakarma-g/project2" class="btn btn-primary">View Project</a>
+                <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden project-card" data-aos="fade-up">
+                    <img src="assets/images/project2.jpg" alt="Task Manager App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Task Manager App</h3>
+                        <p class="text-gray-400 mb-4">A productivity app for managing tasks, built with JavaScript and Firebase for real-time data syncing.</p>
+                        <a href="https://github.com/piyush-vishwakarma-g/project2" class="text-teal-400 hover:underline">View Project</a>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="project-card">
-                        <img src="https://via.placeholder.com/300x200?text=Project+3" class="img-fluid" alt="Project 3">
-                        <h4 class="mt-3">Portfolio Website</h4>
-                        <p>A personal portfolio to showcase my skills and projects, built with HTML, CSS, and Bootstrap.</p>
-                        <a href="https://github.com/piyush-vishwakarma-g/portfolio" class="btn btn-primary">View Project</a>
+                <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden project-card" data-aos="fade-up">
+                    <img src="assets/images/project3.jpg" alt="Portfolio Website" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+                        <p class="text-gray-400 mb-4">A personal portfolio to showcase my skills and projects, built with HTML, CSS, and JavaScript.</p>
+                        <a href="https://github.com/piyush-vishwakarma-g/portfolio" class="text-teal-400 hover:underline">View Project</a>
                     </div>
                 </div>
             </div>
@@ -302,49 +188,51 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="contact-form">
-                        <div>
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
-                        </div>
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-teal-400" data-aos="fade-up">Contact Me</h2>
+            <div class="max-w-lg mx-auto" data-aos="fade-up">
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400" placeholder="Your Name" required>
                     </div>
-                </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400" placeholder="Your Email" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full p-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-400 text-gray-900 p-3 rounded-lg font-semibold hover:bg-teal-500 transition">Send Message</button>
+                </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Piyush Vishwakarma. All Rights Reserved.</p>
-            <div class="social-icons">
-                <a href="https://github.com/piyush-vishwakarma-g" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/piyush-vishwakarma" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/piyushvishwa" target="_blank"><i class="fab fa-twitter"></i></a>
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/piyush-vishwakarma-g" target="_blank" class="text-teal-400 hover:text-teal-500"><i class="fab fa-github text-2xl"></i></a>
+                <a href="https://linkedin.com/in/piyush-vishwakarma" target="_blank" class="text-teal-400 hover:text-teal-500"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="https://twitter.com/piyushvishwa" target="_blank" class="text-teal-400 hover:text-teal-500"><i class="fab fa-twitter text-2xl"></i></a>
             </div>
+            <p class="text-gray-400">© 2025 Piyush Vishwakarma. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
         // Typed.js for typewriter effect
         var typed = new Typed('.typed-element', {
             strings: ['Web Developer', 'Frontend Enthusiast', 'Backend Developer', 'Tech Explorer'],
@@ -353,12 +241,11 @@
             loop: true
         });
 
-        // Form submission (placeholder, as GitHub Pages doesn't support backend)
-        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Form submitted! (Note: This is a demo, no backend is set up.)');
-            this.reset();
-        });
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>
